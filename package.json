@@ -1,0 +1,26 @@
+{
+  "name": "suju-language-support-vscode",
+  "displayName": "suju-language-support-vscode",
+  "description": "Extended Language Support and Syntax Highlighting for SUJU Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "suju",
+      "aliases": ["SUJU", "suju"],
+      "extensions": [".suju",".sj"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "suju",
+      "scopeName": "source.suju",
+      "path": "./syntaxes/suju.tmLanguage.json"
+    }]
+  },
+  "icon": "icon.png"
+}

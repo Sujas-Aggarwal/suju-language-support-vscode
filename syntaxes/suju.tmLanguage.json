@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SUJU",
+  "scopeName": "source.suju",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#say"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#parens"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.conditional.suju",
+          "match": "\\bagar\\b"
+        },
+        {
+          "name": "keyword.control.conditional.suju",
+          "match": "\\blakin\\b"
+        },
+        {
+          "name": "keyword.control.conditional.suju",
+          "match": "\\bmagar\\b"
+        }
+      ]
+    },
+    "say": {
+      "patterns": [
+        {
+          "name": "support.function.say.suju",
+          "match": "\\bsay\\b(?=\\s*\\()"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.suju",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.suju",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "parens": {
+      "patterns": [
+        {
+          "name": "punctuation.section.parens.begin.suju",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.section.parens.end.suju",
+          "match": "\\)"
+        },
+        {
+          "name": "punctuation.section.block.begin.suju",
+          "match": "\\{"
+        },
+        {
+          "name": "punctuation.section.block.end.suju",
+          "match": "\\}"
+        },
+        {
+          "name": "punctuation.terminator.statement.suju",
+          "match": ";"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.suju",
+          "match": "\\+|\\-|\\*|\\/"
+        },
+        {
+          "name": "keyword.operator.comparison.suju",
+          "match": "==|!=|<=|>=|<|>"
+        },
+        {
+          "name": "keyword.operator.logical.suju",
+          "match": "&&|\\|\\|"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.suju",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    }
+  }
+}
