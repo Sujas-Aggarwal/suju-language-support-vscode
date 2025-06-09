@@ -27,15 +27,7 @@
       "patterns": [
         {
           "name": "keyword.control.conditional.suju",
-          "match": "\\bagar\\b"
-        },
-        {
-          "name": "keyword.control.conditional.suju",
-          "match": "\\blakin\\b"
-        },
-        {
-          "name": "keyword.control.conditional.suju",
-          "match": "\\bmagar\\b"
+          "match": "\\b(lekin\\s+agar|magar|agar)\\b"
         }
       ]
     },
